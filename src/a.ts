@@ -51,3 +51,43 @@ runAfter15( function() {
 })
 
 const greet1 = (name : string) => `Hello ${name}` ;
+
+
+function isLegal2(user : {
+    firstName:string,
+    lastName : string,
+    age: number
+}) {
+    if(user.age > 18) {
+        return true;
+    }else {
+        return false;
+    }
+}
+
+interface User {
+    firstName : string;
+    lastName  : string;
+    age : number;
+    email?:string; // option provide or not
+}
+
+function isLegal3(user: User) {
+    if(user.age >18) {
+        return true;
+    }else {
+        return false;
+    }
+}
+
+console.log(isLegal2({
+    firstName : "Rom Rom",
+    lastName : "Bhaiyo",
+    age: 20
+}));
+
+console.log(isLegal3({
+    firstName : "Rom Rom",
+    lastName : "Bhaiyo",
+    age: 15
+}));
