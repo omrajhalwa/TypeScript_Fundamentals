@@ -22,3 +22,16 @@ class Employee implements Person {
 const e = new Employee("harkiral" , 22);
 
 console.log(e.name);
+
+interface Manager {
+    name : string;
+}
+
+interface Userr {
+    age : string;
+}
+
+interface BigPerson extends Userr , Manager {
+    
+}
+
